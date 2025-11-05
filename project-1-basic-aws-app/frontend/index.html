@@ -1,0 +1,10 @@
+<button onclick="callBackend()">Call Backend API</button>
+<p id="result"></p>
+
+<script>
+async function callBackend() {
+    const response = await fetch("http://13.236.134.58:3000");
+    const text = await response.text();
+    document.getElementById("result").innerText = text;
+}
+</script>
